@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header>
+        <div class="logo">Kanban Board</div>
+
+        <div class="task-search">
+            <input type="text" placeholder="Search Title/Task-ID"/>
+        </div>
+
+        <div class="action-wrapper">
+            <div class="add"><i class="fa-solid fa-plus"></i></div>
+            <div class="remove"><i class="fa-solid fa-pen-to-square"></i></i></div>
+            <div class="filter"><span class="material-symbols-outlined">
+                filter_alt
+                </span></div>
+        </div>
+
+        <div class="category-wrapper">
+            <div class="category" data-priority="p1"></div>
+            <div class="category" data-priority="p2"></div>
+            <div class="category" data-priority="p3"></div>
+            <div class="category" data-priority="p4"></div>
+        </div>
+        
+    </header>
+
+    <section class="tasks-wrapper" data-delete-enabled ="false">
+        <div class="swim-lane" id="backlog">
+            <h2>Backlog</h2>
+            <div class="backlog-tile"></div>
+        </div>
+
+        <div class="swim-lane" id="doing">
+            <h2>Doing</h2>
+            <div class="doing-tile"></div>
+        </div>
+
+        <div class="swim-lane" id="done">
+            <h2>Done</h2>
+            <div class="done-tile"></div>
+        </div>
+
+        <div class="swim-lane" id="review">
+            <h2>Review</h2>
+            <div class="review-tile"></div>
+        </div>
+        
+    </section>
+
+    <div class="model hide">
+        <div class="left-portion">
+            <textarea placeholder="Enter Your Task!!!"></textarea>
+        </div>
+        <div class="right-portion">
+            <div class="category p1 selected" data-category ="p1" ></div>
+            <div class="category p2" data-category ="p2" ></div>
+            <div class="category p3" data-category ="p3" ></div>
+            <div class="category p4" data-category ="p4" ></div>
+        </div>
+    </div>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/3be92f9db2.js" crossorigin="anonymous"></script>
+</body>
+</html>
